@@ -8,12 +8,10 @@ function App() {
     Plot("0", 400, 400, "#standardGraph");
     Plot("0", 400, 400, "#diffGraph")
   });
-  const [model, setModel] = useState(Model.Proportional);
-  setModel(Model.Proportional)
   return (
     <div id="App">
       <div id="options">
-      <Form model={model}/>
+      <Form model={Model.Proportional}/>
       </div>
       <div id="graphs">
       <div className="graph-with-label">
