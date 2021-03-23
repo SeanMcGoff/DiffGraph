@@ -1,6 +1,6 @@
 # DiffGraph
 
-Just a little project for Calculus class
+Just a little project for Calculus II Adv.
 
 [Link to Firebase Deployment](https://diffgraph-1.web.app/)
 
