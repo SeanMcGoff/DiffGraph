@@ -11,11 +11,6 @@ interface Props {
     model: Model;
 };
 
-interface ProportionalDEParams {
-    k: number,
-    c: number,
-}
-
 export const Form = (props: Props) => {
     
     const [k, setK] = useState<string>("1");

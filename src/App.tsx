@@ -1,5 +1,4 @@
 import React, {useLayoutEffect, useState} from 'react';
-import {TextField} from '@material-ui/core';
 import { Plot } from './Plot';
 import { Form, Model } from './Form';
 import "./App.css";
@@ -10,6 +9,7 @@ function App() {
     Plot("0", 400, 400, "#diffGraph")
   });
   const [model, setModel] = useState(Model.Proportional);
+  setModel(Model.Proportional)
   return (
     <div id="App">
       <div id="options">
