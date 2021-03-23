@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useState} from 'react';
+import {useLayoutEffect} from 'react';
 import { Plot } from './Plot';
 import { Form, Model } from './Form';
 import "./App.css";
