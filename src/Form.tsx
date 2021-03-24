@@ -28,7 +28,7 @@ export const Form = (props: Props) => {
         case Model.Proportional:
             return (
                 <div>
-                <h1>Parameters:</h1>
+                <h2>Parameters:</h2>
                 <form> 
                     <Grid container direction={"row"} spacing={5}>
                         <Grid item>
@@ -61,6 +61,6 @@ export const Form = (props: Props) => {
 
             );
         default:
-            return (<h1>Not Implemented Yet :/</h1>);
+            return (<h2>Not Implemented Yet :/</h2>);
     }
 }; 
