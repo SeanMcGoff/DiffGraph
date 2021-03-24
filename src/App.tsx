@@ -17,14 +17,14 @@ function App() {
   }
   return (
     <div id="App">
-      <h2>Select Model</h2>
-        <div id="model-select"
-        align-items={"center"}>
+        <div id="model-select">
+          <h2>Select Model</h2>
           <ToggleButtonGroup 
           color="primary" 
           aria-label="Select Model"
           exclusive
-          onChange={handleModelSelect}>
+          onChange={handleModelSelect}
+          value={model}>
             <ToggleButton value={Model.Proportional}>Proportional</ToggleButton>
             <ToggleButton value={Model.Mixture}>Mixture</ToggleButton>
             <ToggleButton value={Model.Logistic}>Logistic</ToggleButton>
