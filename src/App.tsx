@@ -11,7 +11,7 @@ function App() {
     Plot("exp(x)", 400, 400, "#standardGraph");
     Plot("x", 400, 400, "#diffGraph")
   });
-  const [model, setModel] = useState(Model.Proportional);
+  const [model, setModel] = useState(Model.Uninhibited);
   const handleModelSelect = (e: React.MouseEvent<HTMLElement>, v: Model) => {
     setModel(v)
   }
@@ -25,7 +25,7 @@ function App() {
           exclusive
           onChange={handleModelSelect}
           value={model}>
-            <ToggleButton value={Model.Proportional}>Proportional</ToggleButton>
+            <ToggleButton value={Model.Uninhibited}>Uninhibited</ToggleButton>
             <ToggleButton value={Model.Mixture}>Mixture</ToggleButton>
             <ToggleButton value={Model.Logistic}>Logistic</ToggleButton>
           </ToggleButtonGroup>

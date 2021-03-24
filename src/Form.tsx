@@ -1,8 +1,8 @@
 import {useState} from "react";
 import {TextField, Grid} from '@material-ui/core';
-import {PlotProportional} from "./Plot";
+import {PlotUninhibited} from "./Plot";
 export enum Model {
-    Proportional,
+    Uninhibited,
     Logistic,
     Mixture,
 }
@@ -12,20 +12,19 @@ interface Props {
 };
 
 export const Form = (props: Props) => {
-    //Proportional Model
+    //Uninhibited Model
     const [k, setK] = useState<string>("1");
     const [c, setC] = useState<string>("1");
     //Mixture Model
 
     //Logistic Model
 
-
-    const submitProportional = () => {
-          PlotProportional(k,c)
+    const submitUninhibited = () => {
+          PlotUninhibited(k,c)
     }
     switch(props.model) {
 
-        case Model.Proportional:
+        case Model.Uninhibited:
             return (
                 <div>
                 <h2>Parameters:</h2>
@@ -39,7 +38,7 @@ export const Form = (props: Props) => {
                         value={k}
                         onChange={e => {
                             setK(e.target.value);
-                            submitProportional();
+                            submitUninhibited();
                         }}/>
                         </Grid>
                         <Grid item>
@@ -50,7 +49,7 @@ export const Form = (props: Props) => {
                         value={c}
                         onChange={e => {
                             setC(e.target.value);
-                            submitProportional();
+                            submitUninhibited();
                         }}/>
                         </Grid>
                     </Grid>
