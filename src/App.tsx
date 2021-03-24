@@ -1,21 +1,32 @@
-import {useLayoutEffect} from 'react';
-import { Plot } from './Plot';
+import {useState} from 'react';
 import { Form, Model } from './Form';
 import { Grid } from '@material-ui/core';
+import {ToggleButtonGroup, ToggleButton} from '@material-ui/lab';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import "./App.css";
 
 function App() {
-  useLayoutEffect(() => {
-    Plot("exp(x)", 400, 400, "#standardGraph");
-    Plot("x", 400, 400, "#diffGraph")
-  });
+  const [model, setModel] = useState(Model.Uninhibited);
+  const handleModelSelect = (e: React.MouseEvent<HTMLElement>, v: Model) => {
+    setModel(v)
+  }
   return (
     <div id="App">
-      <div id="model-select">
-      </div>
+        <div id="model-select">
+          <h2>Select Model</h2>
+          <ToggleButtonGroup 
+          color="primary" 
+          aria-label="Select Model"
+          exclusive
+          onChange={handleModelSelect}
+          value={model}>
+            <ToggleButton value={Model.Uninhibited}>Uninhibited</ToggleButton>
+            <ToggleButton value={Model.Mixture}>Mixture</ToggleButton>
+            <ToggleButton value={Model.Logistic}>Logistic</ToggleButton>
+          </ToggleButtonGroup>
+        </div>
       <div id="options">
-      <Form model={Model.Proportional}/>
+      <Form model={model}/>
       </div>
       <div className={"graphs"}>
         <Grid container direction={"column"} 
