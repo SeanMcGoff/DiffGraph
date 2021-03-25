@@ -21,7 +21,6 @@ function App() {
           onChange={handleModelSelect}
           value={model}>
             <ToggleButton value={Model.Uninhibited}>Uninhibited</ToggleButton>
-            <ToggleButton value={Model.Mixture}>Mixture</ToggleButton>
             <ToggleButton value={Model.Logistic}>Logistic</ToggleButton>
           </ToggleButtonGroup>
         </div>

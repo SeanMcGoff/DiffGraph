@@ -4,7 +4,6 @@ import {PlotLogistic, PlotUninhibited} from "./Plot";
 export enum Model {
     Uninhibited,
     Logistic,
-    Mixture,
 }
 
 interface Props {
@@ -21,7 +20,6 @@ export interface LogModel {
     m: string,
     z: string,
 }
-
 
 export const Form = (props: Props) => {
     //Uninhibited Model
@@ -73,8 +71,6 @@ export const Form = (props: Props) => {
         case Model.Uninhibited:
             submitUninhibited();
             break;
-        case Model.Mixture:
-            break;
         case Model.Logistic:
             submitLogistic();
             break;
@@ -114,7 +110,6 @@ export const Form = (props: Props) => {
             );
         
         case Model.Logistic:
-            submitLogistic();
             return (
             <div>
             <h2>Parameters:</h2>
@@ -154,7 +149,6 @@ export const Form = (props: Props) => {
                 </form> 
             </div>
             );
-        
         default:
             return (<h2>Not Implemented Yet :/</h2>);
     }
